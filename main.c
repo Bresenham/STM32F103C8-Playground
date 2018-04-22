@@ -9,7 +9,7 @@ void timer2_setup() {
   RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
   
   TIM2->PSC = 0;
-  TIM2->ARR = 900;
+  TIM2->ARR = 0xFFFF;
   TIM2->DIER |= TIM_DIER_UIE;
   
   NVIC_EnableIRQ(TIM2_IRQn);
@@ -19,16 +19,45 @@ void timer2_setup() {
 
 int main()
 {
-  /* Set System-Clock as high as possible */
-  RCC->CFGR = RCC_CFGR_SW_1 | RCC_CFGR_PLLMULL_3 | RCC_CFGR_PLLMULL_2 | RCC_CFGR_PLLMULL_0;
-  RCC->CR = RCC_CR_HSION | RCC_CR_PLLON;
-
   /* Set GPIO C13 as High-Speed PushPull output */
-  RCC->APB2ENR = RCC_APB2ENR_IOPCEN;
+  RCC->APB2ENR |= RCC_APB2ENR_IOPCEN;
+  GPIOC->CRH = 0;
   GPIOC->CRH |= GPIO_CRH_MODE13_1 | GPIO_CRH_MODE13_0;
-
+  
+  /* Configure Clock */
+  //FLASH->ACR |= FLASH_ACR_LATENCY_1;
+  
+  RCC->CR |= RCC_CR_HSION;
+  while(!(RCC->CR & RCC_CR_HSIRDY))
+    asm volatile ("nop");
+  RCC->CFGR &=~ (RCC_CFGR_SW_0 | RCC_CFGR_SW_1);
+  RCC->CR &=~RCC_CR_PLLON;
+  while(RCC->CR & RCC_CR_PLLRDY)
+    asm volatile ("nop");
+  
+  RCC->CFGR &=~ RCC_CFGR_PLLSRC;
+  RCC->CFGR &=~ (RCC_CFGR_PLLMULL_0 | RCC_CFGR_PLLMULL_1 | RCC_CFGR_PLLMULL_2 | RCC_CFGR_PLLMULL_3);
+  RCC->CFGR |= RCC_CFGR_PLLMULL_0 | RCC_CFGR_PLLMULL_1 | RCC_CFGR_PLLMULL_2 | RCC_CFGR_PLLMULL_3;
+  RCC->CR |= RCC_CR_PLLON;
+  
+  while(!(RCC->CR & RCC_CR_PLLRDY))
+    asm volatile ("nop");
+  
+  RCC->CFGR |= RCC_CFGR_SW_1;
+  
+  while(!(RCC->CFGR & RCC_CFGR_SW_1))
+    asm volatile ("nop");
+  
+  /* Set PIN A8 as MCO Output */ 
+  RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
+  GPIOA->CRH = GPIO_CRH_CNF8_1;
+  GPIOA->CRH |= GPIO_CRH_MODE8_1 | GPIO_CRH_MODE8_0;
+  RCC->CFGR |= RCC_CFGR_MCO_2;
+  
+  /*
   timer2_setup();
   GPIOC->ODR &=~GPIO_ODR_ODR13;
+  */
   while(1){
     asm volatile ("nop");
   }

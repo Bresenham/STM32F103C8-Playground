@@ -83,7 +83,7 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 21 25 46 22 33 48 29 18 23 40 47 41 1</file>
+                    <file> 25 33 46 22 21 48 29 18 23 40 47 41 1</file>
                 </tool>
             </inputs>
         </file>
@@ -147,14 +147,6 @@
                 </tool>
             </inputs>
         </file>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\main.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\system_stm32f10x.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
     </configuration>
     <configuration>
         <name>Release</name>
