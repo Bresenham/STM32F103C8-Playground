@@ -1,0 +1,214 @@
+###############################################################################
+#
+# IAR ELF Linker V8.22.2.15995/W32 for ARM                22/Apr/2018  09:39:53
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\Exe\project.out
+#    Map file     =  
+#        D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\List\project.map
+#    Command line =  
+#        -f C:\Users\STANDA~1\AppData\Local\Temp\EW92A2.tmp
+#        (D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\Obj\main.o
+#        D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\Obj\startup_stm32f10x_md_vl.o
+#        D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\Obj\system_stm32f10x.o
+#        -o
+#        D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\Exe\project.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\List\project.map
+#        --config "D:\Programme\IAR Workbench ARM
+#        822\arm\config\linker\ST\stm32f103x8.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x0800ffff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x20000000 to 0x20004fff] {
+          rw, block CSTACK, block HEAP };
+
+No sections matched the following patterns:
+
+  rw  in "P2"
+
+
+  Section   Kind        Address   Size  Object
+  -------   ----        -------   ----  ------
+"A0":                            0x120
+  .intvec   ro code  0x08000000  0x120  startup_stm32f10x_md_vl.o [1]
+                   - 0x08000120  0x120
+
+"P1":                            0x2a8
+  .text     ro code  0x08000120   0xec  system_stm32f10x.o [1]
+  .text     ro code  0x0800020c   0x94  main.o [1]
+  .text     ro code  0x080002a0   0x1e  cmain.o [4]
+  .text     ro code  0x080002be    0x4  low_level_init.o [3]
+  .text     ro code  0x080002c2    0x4  exit.o [3]
+  .text     ro code  0x080002c8    0xa  cexit.o [4]
+  .text     ro code  0x080002d4   0x14  exit.o [5]
+  .text     ro code  0x080002e8   0x10  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080002f8    0xc  cstartup_M.o [4]
+  .text     ro code  0x08000304    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000308    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x0800030c    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000310    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000314    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000318    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x0800031c    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000320    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000324    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000328    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x0800032c    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000330    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000334    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000338    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x0800033c    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000340    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000344    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000348    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x0800034c    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000350    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000354    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000358    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x0800035c    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000360    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000364    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000368    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x0800036c    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000370    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000374    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000378    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x0800037c    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000380    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000384    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000388    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x0800038c    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000390    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000394    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000398    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x0800039c    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080003a0    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080003a4    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080003a8    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080003ac    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080003b0    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080003b4    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080003b8    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080003bc    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080003c0    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080003c4    0x4  startup_stm32f10x_md_vl.o [1]
+                   - 0x080003c8  0x2a8
+
+"P2":                            0x800
+  CSTACK             0x20000000  0x800  <Block>
+    CSTACK  uninit   0x20000000  0x800  <Block tail>
+                   - 0x20000800  0x800
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                     ro code  rw data
+    ------                     -------  -------
+D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\Obj: [1]
+    main.o                         148
+    startup_stm32f10x_md_vl.o      500
+    system_stm32f10x.o             236
+    -------------------------------------------
+    Total:                         884
+
+command line: [2]
+    -------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                           4
+    low_level_init.o                 4
+    -------------------------------------------
+    Total:                           8
+
+rt7M_tl.a: [4]
+    cexit.o                         10
+    cmain.o                         30
+    cstartup_M.o                    12
+    -------------------------------------------
+    Total:                          52
+
+shb_l.a: [5]
+    exit.o                          20
+    -------------------------------------------
+    Total:                          20
+
+    Gaps                             4
+    Linker created                        2 048
+-----------------------------------------------
+    Grand Total:                   968    2 048
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address  Size  Type      Object
+-----                      -------  ----  ----      ------
+?main                   0x080002a1        Code  Gb  cmain.o [4]
+CSTACK$$Base            0x20000000         --   Gb  - Linker created -
+CSTACK$$Limit           0x20000800         --   Gb  - Linker created -
+Region$$Table$$Base     0x00000000         --   Gb  - Linker created -
+Region$$Table$$Limit    0x00000000         --   Gb  - Linker created -
+SystemInit              0x08000121  0xd8  Code  Gb  system_stm32f10x.o [1]
+TIM2_IRQHandler         0x0800020d  0x18  Code  Gb  main.o [1]
+__cmain                 0x080002a1        Code  Gb  cmain.o [4]
+__exit                  0x080002d5  0x14  Code  Gb  exit.o [5]
+__iar_program_start     0x080002f9        Code  Gb  cstartup_M.o [4]
+__iar_systems$$module {Abs}
+                        0x00000001        Data  Gb  command line/config [2]
+__low_level_init        0x080002bf   0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x08000000        Data  Gb  startup_stm32f10x_md_vl.o [1]
+_call_main              0x080002ad        Code  Gb  cmain.o [4]
+_exit                   0x080002c9        Code  Gb  cexit.o [4]
+_main                   0x080002bb        Code  Gb  cmain.o [4]
+exit                    0x080002c3   0x4  Code  Gb  exit.o [3]
+main                    0x08000255  0x2a  Code  Gb  main.o [1]
+timer2_setup            0x08000225  0x2e  Code  Gb  main.o [1]
+
+
+[1] = D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+    968 bytes of readonly  code memory
+  2 048 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

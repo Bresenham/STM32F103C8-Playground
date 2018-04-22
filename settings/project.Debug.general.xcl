@@ -1,0 +1,15 @@
+"D:\Programme\IAR Workbench ARM 822\arm\bin\armproc.dll" 
+
+"D:\Programme\IAR Workbench ARM 822\arm\bin\armstlink2.dll" 
+
+"D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\Exe\project.out" 
+
+--plugin "D:\Programme\IAR Workbench ARM 822\arm\bin\armbat.dll" 
+
+--device_macro "D:\Programme\IAR Workbench ARM 822\arm\config\debugger\ST\STM32F1xx_XL.dmac" 
+
+--flash_loader "D:\Programme\IAR Workbench ARM 822\arm\config\flashloader\ST\FlashSTM32F10xx8.board" 
+
+
+
+
