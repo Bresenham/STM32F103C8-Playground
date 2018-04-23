@@ -68,3 +68,8 @@ void write_data(uint8_t data);
 void write_data_16(uint16_t data);
 
 void ILI9163C_init();
+void clear(uint16_t colour);
+
+void drawPixel(uint8_t x, uint8_t y, uint16_t colour);
+void drawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t colour);
+void drawRectFilled(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t colour);

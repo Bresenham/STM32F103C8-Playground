@@ -28,7 +28,7 @@ void init_clock() {
   
   RCC->CFGR &=~ RCC_CFGR_PLLSRC;
   RCC->CFGR &=~(RCC_CFGR_PLLMULL_3 | RCC_CFGR_PLLMULL_2 | RCC_CFGR_PLLMULL_1 | RCC_CFGR_PLLMULL_0);
-  RCC->CFGR |= RCC_CFGR_PLLMULL_3 | RCC_CFGR_PLLMULL_2 | RCC_CFGR_PLLMULL_1 | RCC_CFGR_PLLMULL_0;
+  RCC->CFGR |= RCC_CFGR_PLLMULL_3;// | RCC_CFGR_PLLMULL_2 | RCC_CFGR_PLLMULL_1 | RCC_CFGR_PLLMULL_0;
   RCC->CR |= RCC_CR_PLLON;
   
   while(!(RCC->CR & RCC_CR_PLLRDY))
@@ -62,6 +62,7 @@ int main()
   //timer2_setup();
   
   ILI9163C_init();
+  clear(0x0000);
   while(1){
     
   }

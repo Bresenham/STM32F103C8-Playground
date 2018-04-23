@@ -32,7 +32,7 @@ void init_SPI() {
   GPIOA->CRL |= GPIO_CRL_MODE7_1 | GPIO_CRL_MODE7_0;
   
   /* SPI Configuration */
-  SPI1->CR1 |= SPI_CR1_BR_2;
+  SPI1->CR1 |= SPI_CR1_BR_1 | SPI_CR1_BR_0;
   SPI1->CR1 |= SPI_CR1_CPHA | SPI_CR1_CPOL;
   
   SPI1->CR2 |= SPI_CR2_SSOE;
