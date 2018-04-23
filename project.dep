@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>2</fileVersion>
-    <fileChecksum>1562384924</fileChecksum>
+    <fileChecksum>3544066751</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
@@ -59,6 +59,21 @@
             <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
             <file>$PROJ_DIR$\Debug\Obj\project.pbd</file>
             <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\ILI9163C.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\ILI9163C.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\utility.__cstat.et</file>
+            <file>$PROJ_DIR$\SPI.h</file>
+            <file>$PROJ_DIR$\ILI9163C.c</file>
+            <file>$PROJ_DIR$\utility.c</file>
+            <file>$PROJ_DIR$\ILI9163C.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\utility.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\utility.o</file>
+            <file>$PROJ_DIR$\utility.h</file>
+            <file>$PROJ_DIR$\SPI.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\ILI9163C.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\SPI.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\SPI.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\SPI.pbi</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
@@ -97,11 +112,11 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 16 33 41 34 51 35 39 28 43 32 44 30 27</file>
+                    <file> 60 57 63 16 33 41 34 51 35 39 28 43 32 44 30 27</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 44 27 41 32 33 51 35 16 43 34 39 28 30</file>
+                    <file> 63 44 57 27 41 32 16 33 51 35 60 43 34 39 28 30</file>
                 </tool>
             </inputs>
         </file>
@@ -143,7 +158,88 @@
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 37 36 46 48 29 42 50 53</file>
+                    <file> 37 54 36 67 46 48 62 29 42 50 53</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\ILI9163C.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 54</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 65</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 55</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 60 57 63 16 33 41 34 51 35 39 28 43 32 44 30 27</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 44 63 27 41 32 57 16 33 51 35 60 43 34 39 28 30</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\utility.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 62</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 56</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 61</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 63 16 33 41 34 51 35 39 28 43 32 44 30 27</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 44 27 41 32 16 33 51 35 63 43 34 39 28 30</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\SPI.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 67</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 66</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 68</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 57 63 16 33 41 34 51 35 39 28 43 32 44 30 27</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 44 27 63 41 32 16 33 51 35 57 43 34 39 28 30</file>
                 </tool>
             </inputs>
         </file>

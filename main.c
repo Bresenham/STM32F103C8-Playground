@@ -1,4 +1,4 @@
-#include "stm32f10x.h"
+#include "ILI9163C.h"
 
 void TIM2_IRQHandler (void) {
     TIM2->SR &=~TIM_SR_UIF;
@@ -26,7 +26,7 @@ void init_clock() {
   while(RCC->CR & RCC_CR_PLLRDY)
     asm volatile ("nop");
   
-  //RCC->CFGR &=~ RCC_CFGR_PLLSRC;
+  RCC->CFGR &=~ RCC_CFGR_PLLSRC;
   RCC->CFGR &=~(RCC_CFGR_PLLMULL_3 | RCC_CFGR_PLLMULL_2 | RCC_CFGR_PLLMULL_1 | RCC_CFGR_PLLMULL_0);
   RCC->CFGR |= RCC_CFGR_PLLMULL_3 | RCC_CFGR_PLLMULL_2 | RCC_CFGR_PLLMULL_1 | RCC_CFGR_PLLMULL_0;
   RCC->CR |= RCC_CR_PLLON;
@@ -43,6 +43,8 @@ void init_clock() {
 int main()
 {
   init_clock();
+  init_SPI();
+  
   /* Set GPIO C13 as High-Speed PushPull output */
   RCC->APB2ENR |= RCC_APB2ENR_IOPCEN;
   GPIOC->CRH = 0;
@@ -57,9 +59,10 @@ int main()
   RCC->CFGR |= RCC_CFGR_MCO_2;
   */
 
-  timer2_setup();
-
+  //timer2_setup();
+  
+  ILI9163C_init();
   while(1){
-    asm volatile ("nop");
+    
   }
 }

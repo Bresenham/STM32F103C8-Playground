@@ -2370,10 +2370,22 @@
         </settings>
     </configuration>
     <file>
+        <name>$PROJ_DIR$\ILI9163C.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\ILI9163C.h</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\main.c</name>
     </file>
     <file>
         <name>$PROJ_DIR$\misc.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\SPI.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\SPI.h</name>
     </file>
     <file>
         <name>$PROJ_DIR$\startup_stm32f10x_md_vl.s</name>
@@ -2452,5 +2464,11 @@
     </file>
     <file>
         <name>$PROJ_DIR$\system_stm32f10x.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\utility.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\utility.h</name>
     </file>
 </project>
