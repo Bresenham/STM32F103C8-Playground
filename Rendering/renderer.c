@@ -7,9 +7,9 @@
 #include "Structs/camera.h"
 
 struct Sphere spheres[] = {
-        { .center = {.x = 0.0f, .y = -0.57f, .z = 3.0f}, .color = {.r = 0, .g = 0, .b = 255}, .radius = 2.25f, .isEmitter = false },
-        { .center = {.x = 0.0f, .y = 8.0f, .z = 3.0f}, .color = {.r = 255, .g = 255, .b = 255}, .radius = 6.0f, .isEmitter = true },
-        { .center = {.x = 0.0f, .y = -8.0f, .z = 3.0f}, .color = {.r = 255, .g = 255, .b = 255}, .radius = 6.0f, .isEmitter = false }
+        { .center = {.x = 0.0f, .y = -0.0f, .z = 3.0f}, .color = {.r = 255, .g = 255, .b = 255}, .radius = 4.0f, .isEmitter = true },
+        { .center = {.x = 0.0f, .y = 8.0f, .z = 3.0f}, .color = {.r = 0, .g = 0, .b = 255}, .radius = 4.0f, .isEmitter = false },
+        { .center = {.x = 0.0f, .y = -8.0f, .z = 3.0f}, .color = {.r = 255, .g = 0, .b = 0}, .radius = 4.0f, .isEmitter = false }
 };
 
 uint16_t buffer[W * H];
@@ -28,25 +28,39 @@ void display() {
 
 void render() {
     samples++;
-    int i = 0;
+    uint16_t i = 0;
     for (uint8_t y = 0; y < H; y++) {
         for (uint8_t x = 0; x < W; x++) {
-            const struct Ray r = generateRay(c, x, y, W, H, samples);
-            const struct RGB color = trace(r, 0);
+            const struct Ray ray = generateRay(c, x, y, W, H, samples);
+            const struct RGB color = trace(ray, 0);
+
             uint16_t color_code;
-            color_code = (color.r & 0x1f) << 11;
-            color_code |= (color.g & 0x3f) << 5;
-            color_code |= (color.b & 0x1f) << 0;
+            
+            const uint8_t r = color.r;
+            const uint8_t g = color.g;
+            const uint8_t b = color.b;
+            
+            color_code = (r & 0x1f) << 11;
+            color_code |= (g & 0x3f) << 5;
+            color_code |= (b & 0x1f) << 0;
+            
             buffer[i] += color_code;
+
             i++;
         }
     }
-    
+
+    /*
+    i = 0;
     for(uint8_t y = 0; y < H; y++) {
       for(uint8_t x = 0; x < W; x++) {
-        buffer[i] /= samples;
+        buffer[i * 3 + 0] /= samples;
+        buffer[i * 3 + 1] /= samples;
+        buffer[i * 3 + 2] /= samples;
+        i++;
       }
     }
+    */
 }
 
 struct RGB trace(const struct Ray ry, int tdepth) {
