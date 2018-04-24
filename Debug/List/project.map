@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.22.2.15995/W32 for ARM                23/Apr/2018  22:17:36
+# IAR ELF Linker V8.22.2.15995/W32 for ARM                24/Apr/2018  08:49:59
 # Copyright 2007-2018 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,7 +8,7 @@
 #    Map file     =  
 #        D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\List\project.map
 #    Command line =  
-#        -f C:\Users\STANDA~1\AppData\Local\Temp\EWCEEA.tmp
+#        -f C:\Users\STANDA~1\AppData\Local\Temp\EWB521.tmp
 #        (D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\Obj\ILI9163C.o
 #        D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\Obj\main.o
 #        D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\Obj\SPI.o
@@ -67,58 +67,19 @@ No sections matched the following patterns:
   .intvec   ro code  0x08000000  0x120  startup_stm32f10x_md_vl.o [1]
                    - 0x08000120  0x120
 
-"P1":                            0x718
-  .text     ro code  0x08000120  0x2ce  ILI9163C.o [1]
-  .text     ro code  0x080003f0  0x144  SPI.o [1]
-  .text     ro code  0x08000534   0x10  utility.o [1]
-  .text     ro code  0x08000544   0xec  system_stm32f10x.o [1]
-  .text     ro code  0x08000630   0xe0  main.o [1]
-  .text     ro code  0x08000710   0x1e  cmain.o [4]
-  .text     ro code  0x0800072e    0x4  low_level_init.o [3]
-  .text     ro code  0x08000732    0x4  exit.o [3]
-  .text     ro code  0x08000738    0xa  cexit.o [4]
-  .text     ro code  0x08000744   0x14  exit.o [5]
-  .text     ro code  0x08000758   0x10  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x08000768    0xc  cstartup_M.o [4]
-  .text     ro code  0x08000774    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x08000778    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x0800077c    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x08000780    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x08000784    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x08000788    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x0800078c    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x08000790    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x08000794    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x08000798    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x0800079c    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007a0    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007a4    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007a8    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007ac    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007b0    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007b4    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007b8    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007bc    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007c0    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007c4    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007c8    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007cc    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007d0    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007d4    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007d8    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007dc    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007e0    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007e4    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007e8    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007ec    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007f0    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007f4    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007f8    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x080007fc    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x08000800    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x08000804    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x08000808    0x4  startup_stm32f10x_md_vl.o [1]
-  .text     ro code  0x0800080c    0x4  startup_stm32f10x_md_vl.o [1]
+"P1":                            0x7b4
+  .text     ro code  0x08000120  0x350  ILI9163C.o [1]
+  .text     ro code  0x08000470  0x130  SPI.o [1]
+  .text     ro code  0x080005a0   0x10  utility.o [1]
+  .text     ro code  0x080005b0  0x110  main.o [1]
+  .text     ro code  0x080006c0   0xec  system_stm32f10x.o [1]
+  .text     ro code  0x080007ac   0x1e  cmain.o [4]
+  .text     ro code  0x080007ca    0x4  low_level_init.o [3]
+  .text     ro code  0x080007ce    0x4  exit.o [3]
+  .text     ro code  0x080007d4    0xa  cexit.o [4]
+  .text     ro code  0x080007e0   0x14  exit.o [5]
+  .text     ro code  0x080007f4   0x10  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000804    0xc  cstartup_M.o [4]
   .text     ro code  0x08000810    0x4  startup_stm32f10x_md_vl.o [1]
   .text     ro code  0x08000814    0x4  startup_stm32f10x_md_vl.o [1]
   .text     ro code  0x08000818    0x4  startup_stm32f10x_md_vl.o [1]
@@ -129,7 +90,46 @@ No sections matched the following patterns:
   .text     ro code  0x0800082c    0x4  startup_stm32f10x_md_vl.o [1]
   .text     ro code  0x08000830    0x4  startup_stm32f10x_md_vl.o [1]
   .text     ro code  0x08000834    0x4  startup_stm32f10x_md_vl.o [1]
-                   - 0x08000838  0x718
+  .text     ro code  0x08000838    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x0800083c    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000840    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000844    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000848    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x0800084c    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000850    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000854    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000858    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x0800085c    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000860    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000864    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000868    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x0800086c    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000870    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000874    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000878    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x0800087c    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000880    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000884    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000888    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x0800088c    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000890    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000894    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x08000898    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x0800089c    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080008a0    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080008a4    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080008a8    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080008ac    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080008b0    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080008b4    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080008b8    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080008bc    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080008c0    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080008c4    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080008c8    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080008cc    0x4  startup_stm32f10x_md_vl.o [1]
+  .text     ro code  0x080008d0    0x4  startup_stm32f10x_md_vl.o [1]
+                   - 0x080008d4  0x7b4
 
 "P2":                            0x800
   CSTACK             0x20000000  0x800  <Block>
@@ -145,14 +145,14 @@ No sections matched the following patterns:
     Module                     ro code  rw data
     ------                     -------  -------
 D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\Obj: [1]
-    ILI9163C.o                     718
-    SPI.o                          324
-    main.o                         224
+    ILI9163C.o                     848
+    SPI.o                          304
+    main.o                         272
     startup_stm32f10x_md_vl.o      500
     system_stm32f10x.o             236
     utility.o                       16
     -------------------------------------------
-    Total:                       2 018
+    Total:                       2 176
 
 command line: [2]
     -------------------------------------------
@@ -176,10 +176,10 @@ shb_l.a: [5]
     -------------------------------------------
     Total:                          20
 
-    Gaps                             6
+    Gaps                             4
     Linker created                        2 048
 -----------------------------------------------
-    Grand Total:                 2 104    2 048
+    Grand Total:                 2 260    2 048
 
 
 *******************************************************************************
@@ -188,40 +188,41 @@ shb_l.a: [5]
 
 Entry                      Address   Size  Type      Object
 -----                      -------   ----  ----      ------
-?main                   0x08000711         Code  Gb  cmain.o [4]
+?main                   0x080007ad         Code  Gb  cmain.o [4]
 CSTACK$$Base            0x20000000          --   Gb  - Linker created -
 CSTACK$$Limit           0x20000800          --   Gb  - Linker created -
-ILI9163C_init           0x0800020f  0x1d6  Code  Gb  ILI9163C.o [1]
+ILI9163C_init           0x080002a1  0x1c6  Code  Gb  ILI9163C.o [1]
 Region$$Table$$Base     0x00000000          --   Gb  - Linker created -
 Region$$Table$$Limit    0x00000000          --   Gb  - Linker created -
-SystemInit              0x08000545   0xd8  Code  Gb  system_stm32f10x.o [1]
-TIM2_IRQHandler         0x08000631   0x18  Code  Gb  main.o [1]
-__cmain                 0x08000711         Code  Gb  cmain.o [4]
-__exit                  0x08000745   0x14  Code  Gb  exit.o [5]
-__iar_program_start     0x08000769         Code  Gb  cstartup_M.o [4]
+SystemInit              0x080006c1   0xd8  Code  Gb  system_stm32f10x.o [1]
+TIM2_IRQHandler         0x080005b1   0x18  Code  Gb  main.o [1]
+__cmain                 0x080007ad         Code  Gb  cmain.o [4]
+__exit                  0x080007e1   0x14  Code  Gb  exit.o [5]
+__iar_program_start     0x08000805         Code  Gb  cstartup_M.o [4]
 __iar_systems$$module {Abs}
                         0x00000001         Data  Gb  command line/config [2]
-__low_level_init        0x0800072f    0x4  Code  Gb  low_level_init.o [3]
+__low_level_init        0x080007cb    0x4  Code  Gb  low_level_init.o [3]
 __vector_table          0x08000000         Data  Gb  startup_stm32f10x_md_vl.o [1]
-_call_main              0x0800071d         Code  Gb  cmain.o [4]
-_exit                   0x08000739         Code  Gb  cexit.o [4]
-_main                   0x0800072b         Code  Gb  cmain.o [4]
-a0_high                 0x080004dd    0xc  Code  Gb  SPI.o [1]
-a0_low                  0x080004e9    0xc  Code  Gb  SPI.o [1]
-clear                   0x080001b1   0x4e  Code  Gb  ILI9163C.o [1]
-cs_high                 0x08000501    0xc  Code  Gb  SPI.o [1]
-cs_low                  0x080004f5    0xc  Code  Gb  SPI.o [1]
-delay                   0x08000535   0x10  Code  Gb  utility.o [1]
-drawRectFilled          0x08000149   0x68  Code  Gb  ILI9163C.o [1]
-exit                    0x08000733    0x4  Code  Gb  exit.o [3]
-init_SPI                0x080003f1   0xb8  Code  Gb  SPI.o [1]
-init_clock              0x08000649   0x6c  Code  Gb  main.o [1]
-main                    0x080006b5   0x48  Code  Gb  main.o [1]
-reset                   0x080004b5   0x28  Code  Gb  SPI.o [1]
-reset_high              0x080004a9    0xc  Code  Gb  SPI.o [1]
-spi_transmit            0x08000511   0x10  Code  Gb  SPI.o [1]
+_call_main              0x080007b9         Code  Gb  cmain.o [4]
+_exit                   0x080007d5         Code  Gb  cexit.o [4]
+_main                   0x080007c7         Code  Gb  cmain.o [4]
+a0_high                 0x08000549    0xc  Code  Gb  SPI.o [1]
+a0_low                  0x08000555    0xc  Code  Gb  SPI.o [1]
+clear                   0x0800024f   0x42  Code  Gb  ILI9163C.o [1]
+cs_high                 0x0800056d    0xc  Code  Gb  SPI.o [1]
+cs_low                  0x08000561    0xc  Code  Gb  SPI.o [1]
+delay                   0x080005a1   0x10  Code  Gb  utility.o [1]
+drawLine                0x080001a1   0xae  Code  Gb  ILI9163C.o [1]
+drawPixel               0x0800015f   0x42  Code  Gb  ILI9163C.o [1]
+exit                    0x080007cf    0x4  Code  Gb  exit.o [3]
+init_SPI                0x08000471   0xb0  Code  Gb  SPI.o [1]
+init_clock              0x080005c9   0x6c  Code  Gb  main.o [1]
+main                    0x08000635   0x76  Code  Gb  main.o [1]
+reset                   0x08000521   0x28  Code  Gb  SPI.o [1]
+spi_transmit            0x0800057d   0x10  Code  Gb  SPI.o [1]
 write_command           0x08000121    0xe  Code  Gb  ILI9163C.o [1]
 write_data              0x0800012f    0xc  Code  Gb  ILI9163C.o [1]
+write_data_16           0x08000149   0x16  Code  Gb  ILI9163C.o [1]
 
 
 [1] = D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\Obj
@@ -230,7 +231,7 @@ write_data              0x0800012f    0xc  Code  Gb  ILI9163C.o [1]
 [4] = rt7M_tl.a
 [5] = shb_l.a
 
-  2 104 bytes of readonly  code memory
+  2 260 bytes of readonly  code memory
   2 048 bytes of readwrite data memory
 
 Errors: none

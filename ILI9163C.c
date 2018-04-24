@@ -14,6 +14,14 @@ void write_data(uint8_t data) {
   cs_high();
 }
 
+void write_data_16(uint16_t data) {
+  cs_low();
+  a0_high();
+  spi_transmit(data >> 8);
+  spi_transmit(data);
+  cs_high();
+}
+
 void drawRectFilled(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t colour) {
     uint16_t pixels;
             
@@ -36,7 +44,7 @@ void drawRectFilled(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t col
     write_command(WRITE_MEMORY_START);
     
     for (pixels = 0; pixels < (((x1 - x0) + 1) * ((y1 - y0) + 1)); pixels++)
-        write_data(colour);
+        write_data_16(colour);
 }
 
 void drawPixel(uint8_t x, uint8_t y, uint16_t colour) {
@@ -56,7 +64,7 @@ void drawPixel(uint8_t x, uint8_t y, uint16_t colour) {
 
     // Plot the point
     write_command(WRITE_MEMORY_START);
-    write_data(colour);
+    write_data_16(colour);
 }
 
 void drawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t colour) {
@@ -111,7 +119,6 @@ void clear(uint16_t color) {
   
     // Set the column address to 0-127
     write_command(SET_COLUMN_ADDRESS);
-    delay(50);
     write_data(0x00);
     write_data(0x00);
     write_data(0x00);
@@ -119,7 +126,6 @@ void clear(uint16_t color) {
 
     // Set the page address to 0-127
     write_command(SET_PAGE_ADDRESS);
-    delay(50);
     write_data(0x00);
     write_data(0x00);
     write_data(0x00);
@@ -127,24 +133,25 @@ void clear(uint16_t color) {
   
     // Plot the pixels
     write_command(WRITE_MEMORY_START);
-    delay(50);
     for(pixel = 0; pixel <= 128*128; pixel++){
-      write_data(color);
+      write_data_16(color);
     }
 }
 
 void ILI9163C_init() {
+    /*
     cs_high();
     delay(50);
     reset_high();
     delay(50);
+    */
     reset();
     delay(50);
     write_command(EXIT_SLEEP_MODE);
     delay(50); // Wait for the screen to wake up
     
     write_command(SET_PIXEL_FORMAT);
-    write_data(0x05); // 16 bits per pixel
+    write_data(0x03); // 16 bits per pixel
     delay(50);
     
     write_command(SET_GAMMA_CURVE);
