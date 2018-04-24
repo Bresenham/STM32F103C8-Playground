@@ -2369,6 +2369,54 @@
             </data>
         </settings>
     </configuration>
+    <group>
+        <name>Rendering</name>
+        <group>
+            <name>Structs</name>
+            <file>
+                <name>$PROJ_DIR$\Rendering\Structs\camera.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Rendering\Structs\camera.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Rendering\Structs\halton.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Rendering\Structs\halton.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Rendering\Structs\Point.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Rendering\Structs\Point.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Rendering\Structs\Ray.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Rendering\Structs\Ray.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Rendering\Structs\RGB.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Rendering\Structs\RGB.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Rendering\Structs\Sphere.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Rendering\Structs\Sphere.h</name>
+            </file>
+        </group>
+        <file>
+            <name>$PROJ_DIR$\Rendering\renderer.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Rendering\renderer.h</name>
+        </file>
+    </group>
     <file>
         <name>$PROJ_DIR$\ILI9163C.c</name>
     </file>

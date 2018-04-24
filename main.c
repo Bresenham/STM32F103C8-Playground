@@ -1,5 +1,5 @@
-#include "ILI9163C.h"
 #include "stdbool.h"
+#include "Rendering/renderer.h"
 
 void TIM2_IRQHandler (void) {
     TIM2->SR &=~TIM_SR_UIF;
@@ -64,26 +64,8 @@ int main()
   
   ILI9163C_init();
   clear(0x0000);
-  
-  uint8_t x_1 = 0;
-  uint8_t y_1 = 0;
-  
-  uint8_t x_2 = 0;
-  uint8_t y_2 = 0;
-  
-  uint16_t col = 0xFFFF;
   while(1){
-    drawLine(x_1, y_1, x_2, y_2, col);
-    if(col > 0){
-      y_1 += 2;
-      x_2 += 2;
-    } else {
-      y_1 -= 2;
-      x_2 -= 2;      
-    }
-    if(y_1 >= 254 && x_2 >= 254)
-      col = 0x0000;
-    else if(y_1 <= 1 && x_2 <= 1)
-      col = 0xFFFF;
+    render();
+    display();
   }
 }
