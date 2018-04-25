@@ -245,7 +245,7 @@ void ILI9163C_init() {
     
     // Select display orientation
     write_command(SET_ADDRESS_MODE);
-    write_data(160); //can also be 0, 96, 160, 192
+    write_data(192); //can also be 0, 96, 160, 192
     delay(50);
     
     // Set the display to on

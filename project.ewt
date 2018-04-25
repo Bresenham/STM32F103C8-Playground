@@ -2514,6 +2514,12 @@
         <name>$PROJ_DIR$\system_stm32f10x.h</name>
     </file>
     <file>
+        <name>$PROJ_DIR$\uart.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\uart.h</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\utility.c</name>
     </file>
     <file>

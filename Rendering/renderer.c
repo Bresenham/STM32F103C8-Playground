@@ -2,65 +2,60 @@
 // Created by Standardbenutzer on 31.03.2018.
 //
 
+#include "stdio.h"
 #include "renderer.h"
 #include "Structs/Sphere.h"
 #include "Structs/camera.h"
 
 struct Sphere spheres[] = {
         { .center = {.x = 0.0f, .y = -0.0f, .z = 3.0f}, .color = {.r = 255, .g = 255, .b = 255}, .radius = 4.0f, .isEmitter = true },
-        { .center = {.x = 0.0f, .y = 8.0f, .z = 3.0f}, .color = {.r = 0, .g = 0, .b = 255}, .radius = 4.0f, .isEmitter = false },
-        { .center = {.x = 0.0f, .y = -8.0f, .z = 3.0f}, .color = {.r = 255, .g = 0, .b = 0}, .radius = 4.0f, .isEmitter = false }
+        { .center = {.x = 0.0f, .y = 8.0f, .z = 3.0f}, .color = {.r = 255, .g = 255, .b = 255}, .radius = 4.0f, .isEmitter = false },
+        { .center = {.x = 0.0f, .y = -8.0f, .z = 3.0f}, .color = {.r = 255, .g = 255, .b = 255}, .radius = 4.0f, .isEmitter = false }
 };
 
-uint16_t buffer[W * H];
+uint16_t buffer[W * H * 3];
 uint8_t samples = 0;
-const struct camera c = {.pos = {.x = 0.0, .y = .25f, .z = 50.25}};
+const struct camera c = {.pos = {.x = 0.0, .y = .25f, .z = 50.25f}};
 
 void display() {
-  int i = 0;
-  for(uint8_t y = 0; y < H; y++) {
-    for(uint8_t x = 0; x < W; x++) {
-      drawPixel(x + (128 - W) / 2, y + (128 - H) / 2, buffer[i]);
-      i++;
-    }
+  uint16_t x,y,i = 0;
+  for (y = 0; y < H; y++)
+  {
+      for (x = 0; x < W; x++)
+      {
+          const uint16_t r = buffer[i * 3 + 0] / samples;
+          const uint16_t g = buffer[i * 3 + 1] / samples;
+          const uint16_t b = buffer[i * 3 + 2] / samples;
+
+          uint16_t color_code;
+          color_code  = (r >> 3) << 11;
+          color_code |= (g >> 2) << 5;
+          color_code |= (b >> 3) << 0;
+          
+          drawPixel(x + (128 - W) / 2, y + (128 - H) / 2, color_code);
+          i++;
+          /*
+          char buffer[50];
+          sprintf(buffer, "Pixel %3d,%3d has color %3d,%3d,%3d\r\n", x, y, r, g, b);
+          send_str(buffer, sizeof(buffer));
+          */
+      }
   }
 }
 
 void render() {
     samples++;
     uint16_t i = 0;
-    for (uint8_t y = 0; y < H; y++) {
-        for (uint8_t x = 0; x < W; x++) {
-            const struct Ray ray = generateRay(c, x, y, W, H, samples);
-            const struct RGB color = trace(ray, 0);
-
-            uint16_t color_code;
-            
-            const uint8_t r = color.r;
-            const uint8_t g = color.g;
-            const uint8_t b = color.b;
-            
-            color_code = (r & 0x1f) << 11;
-            color_code |= (g & 0x3f) << 5;
-            color_code |= (b & 0x1f) << 0;
-            
-            buffer[i] += color_code;
-
+    for (int y = 0; y < H; y++) {
+        for (int x = 0; x < W; x++) {
+            const struct Ray r = generateRay(c, x, y, W, H, samples);
+            const struct RGB color = trace(r, 0);
+            buffer[i * 3 + 0] += color.r;
+            buffer[i * 3 + 1] += color.g;
+            buffer[i * 3 + 2] += color.b;
             i++;
         }
     }
-
-    /*
-    i = 0;
-    for(uint8_t y = 0; y < H; y++) {
-      for(uint8_t x = 0; x < W; x++) {
-        buffer[i * 3 + 0] /= samples;
-        buffer[i * 3 + 1] /= samples;
-        buffer[i * 3 + 2] /= samples;
-        i++;
-      }
-    }
-    */
 }
 
 struct RGB trace(const struct Ray ry, int tdepth) {
@@ -95,9 +90,9 @@ struct RGB trace(const struct Ray ry, int tdepth) {
     int g = hitObject.color.g * returnColor.g;
     int b = hitObject.color.b * returnColor.b;
 
-    r /= 255.0;
-    g /= 255.0;
-    b /= 255.0;
+    r /= 255;
+    g /= 255;
+    b /= 255;
 
     return (struct RGB){ .r = r, .g = g, .b = b};
 }

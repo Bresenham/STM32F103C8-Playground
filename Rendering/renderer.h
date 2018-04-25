@@ -8,8 +8,8 @@
 #include "Structs/Ray.h"
 #include "../ILI9163C.h"
 
-#define W 95
-#define H 95
+#define W 55
+#define H 55
 #define TRACEDEPTH  3
 #define SAMPLES 1
 

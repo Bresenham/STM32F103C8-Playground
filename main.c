@@ -45,7 +45,7 @@ int main()
 {
   init_clock();
   init_SPI();
-  
+  init_UART();
   /* Set GPIO C13 as High-Speed PushPull output */
   RCC->APB2ENR |= RCC_APB2ENR_IOPCEN;
   GPIOC->CRH = 0;
