@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.22.2.15995/W32 for ARM                25/Apr/2018  21:35:18
+# IAR ELF Linker V8.22.2.15995/W32 for ARM                27/Apr/2018  19:55:02
 # Copyright 2007-2018 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,7 +8,7 @@
 #    Map file     =  
 #        D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\List\project.map
 #    Command line =  
-#        -f C:\Users\STANDA~1\AppData\Local\Temp\EWCEFA.tmp
+#        -f C:\Users\STANDA~1\AppData\Local\Temp\EWB026.tmp
 #        (D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\Obj\camera.o
 #        D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\Obj\halton.o
 #        D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\Obj\ILI9163C.o
@@ -175,16 +175,16 @@ initialize by copy { rw };
     .data            inited   0x20000060     0x8  rand.o [3]
                             - 0x20000068    0x68
 
-"P2", part 2 of 3:                        0x4770
-  .bss               zero     0x20000068  0x46e8  renderer.o [1]
-  .bss               zero     0x20004750    0x84  rand.o [3]
-  .bss               zero     0x200047d4     0x1  renderer.o [1]
-                            - 0x200047d5  0x476d
+"P2", part 2 of 3:                        0x4438
+  .bss               zero     0x20000068  0x43b0  renderer.o [1]
+  .bss               zero     0x20004418    0x84  rand.o [3]
+  .bss               zero     0x2000449c     0x1  renderer.o [1]
+                            - 0x2000449d  0x4435
 
 "P2", part 3 of 3:                         0x800
-  CSTACK                      0x200047d8   0x800  <Block>
-    CSTACK           uninit   0x200047d8   0x800  <Block tail>
-                            - 0x20004fd8   0x800
+  CSTACK                      0x200044a0   0x800  <Block>
+    CSTACK           uninit   0x200044a0   0x800  <Block tail>
+                            - 0x20004ca0   0x800
 
 
 *******************************************************************************
@@ -194,8 +194,8 @@ initialize by copy { rw };
           Address     Size
           -------     ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0x476d:
-          0x20000068  0x476d
+    1 destination range, total size 0x4435:
+          0x20000068  0x4435
 
 Copy/packbits (__iar_packbits_init_single3)
     1 source range, total size 0x49 (70% of destination):
@@ -219,13 +219,13 @@ D:\Dokumente\STM32Projects\STM32F103C8-Playground\Debug\Obj: [1]
     camera.o                       276
     halton.o                       118
     main.o                         276
-    renderer.o                     776       79   18 249
+    renderer.o                     776       79   17 425
     startup_stm32f10x_md_vl.o      500
     system_stm32f10x.o             344
     uart.o                         128
     utility.o                       20
     ----------------------------------------------------
-    Total:                       4 504       79   18 249
+    Total:                       4 504       79   17 425
 
 command line: [2]
     ----------------------------------------------------
@@ -279,7 +279,7 @@ shb_l.a: [6]
     Gaps                            16
     Linker created                           32    2 048
 --------------------------------------------------------
-    Grand Total:                 7 996      117   20 437
+    Grand Total:                 7 996      117   19 613
 
 
 *******************************************************************************
@@ -291,8 +291,8 @@ Entry                      Address    Size  Type      Object
 .iar.init_table$$Base   0x08001e14           --   Gb  - Linker created -
 .iar.init_table$$Limit  0x08001e34           --   Gb  - Linker created -
 ?main                   0x08001e35          Code  Gb  cmain.o [5]
-CSTACK$$Base            0x200047d8           --   Gb  - Linker created -
-CSTACK$$Limit           0x20004fd8           --   Gb  - Linker created -
+CSTACK$$Base            0x200044a0           --   Gb  - Linker created -
+CSTACK$$Limit           0x20004ca0           --   Gb  - Linker created -
 ILI9163C_init           0x08000235   0x218  Code  Gb  ILI9163C.o [1]
 Region$$Table$$Base     0x08001e14           --   Gb  - Linker created -
 Region$$Table$$Limit    0x08001e34           --   Gb  - Linker created -
@@ -300,8 +300,8 @@ SetSysClock             0x08001add     0x8  Code  Lc  system_stm32f10x.o [1]
 SetSysClockTo72         0x08001ae5    0xe0  Code  Lc  system_stm32f10x.o [1]
 SystemInit              0x08001a89    0x54  Code  Gb  system_stm32f10x.o [1]
 TIM2_IRQHandler         0x08001be1    0x1c  Code  Gb  main.o [1]
-_Rand_idx               0x200047d0     0x4  Data  Lc  rand.o [3]
-_Rand_rv                0x20004750    0x80  Data  Lc  rand.o [3]
+_Rand_idx               0x20004498     0x4  Data  Lc  rand.o [3]
+_Rand_rv                0x20004418    0x80  Data  Lc  rand.o [3]
 _Randinit               0x20000060     0x1  Data  Gb  rand.o [3]
 _Randseed               0x20000064     0x4  Data  Gb  rand.o [3]
 __aeabi_cfcmpeq         0x08000c0d          Code  Gb  FltCmpEq.o [4]
@@ -352,7 +352,7 @@ _main                   0x08001e4f          Code  Gb  cmain.o [5]
 a0_high                 0x08000583     0xe  Code  Gb  SPI.o [1]
 a0_low                  0x08000591     0xe  Code  Gb  SPI.o [1]
 add                     0x08000ea1    0x32  Code  Gb  Point.o [1]
-buffer                  0x20000068  0x46e8  Data  Gb  renderer.o [1]
+buffer                  0x20000068  0x43b0  Data  Gb  renderer.o [1]
 c                       0x08001e8c     0xc  Data  Gb  renderer.o [1]
 clear                   0x080001d3    0x62  Code  Gb  ILI9163C.o [1]
 cosf                    0x08001a29     0x4  Code  Gb  cos_sin32.o [4]
@@ -382,7 +382,7 @@ render                  0x080006a5    0xc4  Code  Gb  renderer.o [1]
 reset                   0x08000567    0x1c  Code  Gb  SPI.o [1]
 reset_high              0x0800054b     0xe  Code  Gb  SPI.o [1]
 reset_low               0x08000559     0xe  Code  Gb  SPI.o [1]
-samples                 0x200047d4     0x1  Data  Gb  renderer.o [1]
+samples                 0x2000449c     0x1  Data  Gb  renderer.o [1]
 sinf                    0x08001a2d     0x4  Code  Gb  cos_sin32.o [4]
 sphereNormal            0x08000bd5    0x38  Code  Gb  Sphere.o [1]
 spheres                 0x20000000    0x60  Data  Gb  renderer.o [1]
@@ -405,7 +405,7 @@ write_data_16           0x08000155    0x26  Code  Gb  ILI9163C.o [1]
 
    7 996 bytes of readonly  code memory
      117 bytes of readonly  data memory
-  20 437 bytes of readwrite data memory
+  19 613 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

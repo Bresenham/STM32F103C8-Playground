@@ -13,7 +13,7 @@ struct Sphere spheres[] = {
         { .center = {.x = 0.0f, .y = -8.0f, .z = 3.0f}, .color = {.r = 255, .g = 255, .b = 255}, .radius = 4.0f, .isEmitter = false }
 };
 
-uint16_t buffer[W * H * 3];
+uint32_t buffer[W * H * 3];
 uint8_t samples = 0;
 const struct camera c = {.pos = {.x = 0.0, .y = .25f, .z = 50.25f}};
 
