@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>4</fileVersion>
+    <fileChecksum>1046110939</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_version.h</file>
+            <file>$PROJ_DIR$\CMSIS\stm32f1xx.h</file>
+            <file>$PROJ_DIR$\CMSIS\system_stm32f1xx.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$PROJ_DIR$\GlobalHelperFunctions.h</file>
+            <file>$PROJ_DIR$\Debug\List\ProjectFile.map</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\CMSIS\startup_stm32f103xb.s</file>
+            <file>$TOOLKIT_DIR$\CMSIS\Core\Include\cmsis_iccarm.h</file>
+            <file>$PROJ_DIR$\CMSIS\core_cm3.h</file>
+            <file>$PROJ_DIR$\DS18B20.c</file>
+            <file>$PROJ_DIR$\DS18B20.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Exe\ProjectFile.out</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_compiler.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$PROJ_DIR$\CMSIS\stm32f103xb.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\ProjectFile.pbd</file>
+            <file>$TOOLKIT_DIR$\config\linker\ST\stm32f103x8.icf</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\GlobalHelperFunctions.c</file>
+            <file>$PROJ_DIR$\CMSIS\system_stm32f1xx.h</file>
+            <file>$PROJ_DIR$\main.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\GlobalHelperFunctions.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\DS18B20.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\GlobalHelperFunctions.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\DS18B20.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\GlobalHelperFunctions.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_stm32f103xb.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_stm32f1xx.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_stm32f1xx.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\DS18B20.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_stm32f1xx.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\CMSIS\system_stm32f1xx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 36</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 34</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 39</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 19 11 40 35 28 41 26 37 1 16 10 4 24</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\CMSIS\startup_stm32f103xb.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 33</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\DS18B20.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 38</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 29</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 31</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 19 11 40 35 28 41 26 37 1 16 10 4 24 13 0 5</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\ProjectFile.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 6</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 21 38 30 18 33 36 8 22 7 42</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\GlobalHelperFunctions.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 32</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 27</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 5 40 35 28 41 26 37 2 19 11 1 16 10 4 24</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 18</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 17</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 14</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 19 11 40 35 28 41 26 37 1 16 10 4 24 0 13 5</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 15 6</file>
+                </tool>
+            </outputs>
+        </file>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>
