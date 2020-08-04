@@ -140334,7 +140334,7 @@
     "display": "void writeZero(void)",
     "location": {
       "column": "6",
-      "line": "50",
+      "line": "46",
       "path": "Z:\\Git\\STM32F103C8-Playground\\Various_IAR_STM32\\DS18B20.c"
     },
     "name": "writeZero",
@@ -140348,10 +140348,24 @@
     "display": "uint8_t readBit(void)",
     "location": {
       "column": "9",
-      "line": "68",
+      "line": "64",
       "path": "Z:\\Git\\STM32F103C8-Playground\\Various_IAR_STM32\\DS18B20.c"
     },
     "name": "readBit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:DS18B20.c@1585@F@readBit@bit_val",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "bit_val",
+    "location": {
+      "column": "17",
+      "line": "82",
+      "path": "Z:\\Git\\STM32F103C8-Playground\\Various_IAR_STM32\\DS18B20.c"
+    },
+    "name": "bit_val",
     "origin": "project_file",
     "scope": null
   },
@@ -140362,10 +140376,24 @@
     "display": "bool startCommunication(void)",
     "location": {
       "column": "6",
-      "line": "89",
+      "line": "90",
       "path": "Z:\\Git\\STM32F103C8-Playground\\Various_IAR_STM32\\DS18B20.c"
     },
     "name": "startCommunication",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:DS18B20.c@2156@F@startCommunication@is_low",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "is_low",
+    "location": {
+      "column": "14",
+      "line": "109",
+      "path": "Z:\\Git\\STM32F103C8-Playground\\Various_IAR_STM32\\DS18B20.c"
+    },
+    "name": "is_low",
     "origin": "project_file",
     "scope": null
   },
@@ -140376,7 +140404,7 @@
     "display": "void sendByte(const uint8_t)",
     "location": {
       "column": "6",
-      "line": "111",
+      "line": "117",
       "path": "Z:\\Git\\STM32F103C8-Playground\\Various_IAR_STM32\\DS18B20.c"
     },
     "name": "sendByte",
@@ -140384,13 +140412,13 @@
     "scope": null
   },
   {
-    "ID": "c:DS18B20.c@2125@F@sendByte@bit_pos",
+    "ID": "c:DS18B20.c@2368@F@sendByte@bit_pos",
     "What": "Variable",
     "defdec": "Def",
     "display": "bit_pos",
     "location": {
-      "column": "14",
-      "line": "113",
+      "column": "15",
+      "line": "119",
       "path": "Z:\\Git\\STM32F103C8-Playground\\Various_IAR_STM32\\DS18B20.c"
     },
     "name": "bit_pos",
@@ -140404,7 +140432,7 @@
     "display": "uint64_t readData(const uint8_t)",
     "location": {
       "column": "10",
-      "line": "127",
+      "line": "133",
       "path": "Z:\\Git\\STM32F103C8-Playground\\Various_IAR_STM32\\DS18B20.c"
     },
     "name": "readData",
@@ -140412,13 +140440,13 @@
     "scope": null
   },
   {
-    "ID": "c:DS18B20.c@2385@F@readData@retData",
+    "ID": "c:DS18B20.c@2652@F@readData@retData",
     "What": "Variable",
     "defdec": "Def",
     "display": "retData",
     "location": {
-      "column": "11",
-      "line": "129",
+      "column": "12",
+      "line": "135",
       "path": "Z:\\Git\\STM32F103C8-Playground\\Various_IAR_STM32\\DS18B20.c"
     },
     "name": "retData",
@@ -140426,13 +140454,13 @@
     "scope": null
   },
   {
-    "ID": "c:DS18B20.c@2412@F@readData@bit_pos",
+    "ID": "c:DS18B20.c@2679@F@readData@bit_pos",
     "What": "Variable",
     "defdec": "Def",
     "display": "bit_pos",
     "location": {
-      "column": "14",
-      "line": "131",
+      "column": "15",
+      "line": "137",
       "path": "Z:\\Git\\STM32F103C8-Playground\\Various_IAR_STM32\\DS18B20.c"
     },
     "name": "bit_pos",
@@ -140440,13 +140468,13 @@
     "scope": null
   },
   {
-    "ID": "c:DS18B20.c@2478@F@readData@read_bit",
+    "ID": "c:DS18B20.c@2755@F@readData@read_bit",
     "What": "Variable",
     "defdec": "Def",
     "display": "read_bit",
     "location": {
-      "column": "17",
-      "line": "133",
+      "column": "19",
+      "line": "139",
       "path": "Z:\\Git\\STM32F103C8-Playground\\Various_IAR_STM32\\DS18B20.c"
     },
     "name": "read_bit",
@@ -140460,7 +140488,7 @@
     "display": "uint64_t readDeviceID(void)",
     "location": {
       "column": "10",
-      "line": "143",
+      "line": "149",
       "path": "Z:\\Git\\STM32F103C8-Playground\\Various_IAR_STM32\\DS18B20.c"
     },
     "name": "readDeviceID",
@@ -140468,13 +140496,13 @@
     "scope": null
   },
   {
-    "ID": "c:DS18B20.c@2669@F@readDeviceID@ret_val",
+    "ID": "c:DS18B20.c@2954@F@readDeviceID@ret_val",
     "What": "Variable",
     "defdec": "Def",
     "display": "ret_val",
     "location": {
-      "column": "11",
-      "line": "145",
+      "column": "12",
+      "line": "151",
       "path": "Z:\\Git\\STM32F103C8-Playground\\Various_IAR_STM32\\DS18B20.c"
     },
     "name": "ret_val",
@@ -140482,13 +140510,13 @@
     "scope": null
   },
   {
-    "ID": "c:DS18B20.c@2696@F@readDeviceID@successfull",
+    "ID": "c:DS18B20.c@2981@F@readDeviceID@successfull",
     "What": "Variable",
     "defdec": "Def",
     "display": "successfull",
     "location": {
-      "column": "13",
-      "line": "147",
+      "column": "14",
+      "line": "153",
       "path": "Z:\\Git\\STM32F103C8-Playground\\Various_IAR_STM32\\DS18B20.c"
     },
     "name": "successfull",
@@ -140502,7 +140530,7 @@
     "display": "void initDS18B20(struct DS18B20 *)",
     "location": {
       "column": "6",
-      "line": "158",
+      "line": "163",
       "path": "Z:\\Git\\STM32F103C8-Playground\\Various_IAR_STM32\\DS18B20.c"
     },
     "name": "initDS18B20",
@@ -140956,6 +140984,20 @@
       "path": "Z:\\Git\\STM32F103C8-Playground\\Various_IAR_STM32\\main.c"
     },
     "name": "main",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@1494@F@main@ds18b20_device_id",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "ds18b20_device_id",
+    "location": {
+      "column": "27",
+      "line": "75",
+      "path": "Z:\\Git\\STM32F103C8-Playground\\Various_IAR_STM32\\main.c"
+    },
+    "name": "ds18b20_device_id",
     "origin": "project_file",
     "scope": null
   }

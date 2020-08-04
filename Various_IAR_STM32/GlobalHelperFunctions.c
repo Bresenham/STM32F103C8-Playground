@@ -4,7 +4,7 @@
 void wait(const uint32_t us) {
 	
   /* Rough Estimation */
-  volatile uint32_t amount_of_loops = ( sysclk_in_mhz * us ) / 13;
+  volatile uint32_t amount_of_loops = ( sysclk_in_mhz * us ) / 12;
 
   while(amount_of_loops > 0) {
     amount_of_loops--;
@@ -22,7 +22,7 @@ void update_sysclk_to_128mhz() {
   while( !(RCC->CR & RCC_CR_HSERDY) ) { ; }
   
   /* 16x PLL */
-  RCC->CFGR |= RCC_CFGR_PLLMULL16;
+  RCC->CFGR |= RCC_CFGR_PLLMULL9;
   
   /* External Oscillator is not divided */
   RCC->CFGR &= ~RCC_CFGR_PLLXTPRE;

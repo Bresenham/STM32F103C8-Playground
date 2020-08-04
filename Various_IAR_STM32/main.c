@@ -68,14 +68,14 @@ int main(void) {
   sysclk_in_mhz = SystemCoreClock / 1000000;
   
   init_led();
-  init_timer();
+  // init_timer();
   
-  // initDS18B20(&ds18b20);
+  initDS18B20(&ds18b20);
 
-  // const uint64_t ds18b20_device_id = ds18b20.readDeviceID();
+  const volatile uint64_t ds18b20_device_id = ds18b20.readDeviceID();
         
   while(true) {
-    // wait(30000);
+    wait(30000);
     // GPIOC->ODR ^= GPIO_ODR_ODR13;
     // wait(30000);
     // GPIOC->ODR ^= GPIO_ODR_ODR13;
