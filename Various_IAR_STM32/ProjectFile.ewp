@@ -2148,4 +2148,10 @@
     <file>
         <name>$PROJ_DIR$\main.c</name>
     </file>
+    <file>
+        <name>$PROJ_DIR$\ROM_CODE.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\ROM_CODE.h</name>
+    </file>
 </project>

@@ -30,6 +30,12 @@ void update_sysclk_to_128mhz() {
   /* Use External Oscillator as PLL Input */
   RCC->CFGR |= RCC_CFGR_PLLSRC;
   
+  /* No Clock Division for APB2-Bus */
+  RCC->CFGR &= ~RCC_CFGR_PPRE2;
+  
+  /* No Clock Division for APB1-Bus */
+  RCC->CFGR &= ~RCC_CFGR_PPRE1;
+  
   /* Re-Enable PLL */
   RCC->CR |= RCC_CR_PLLON;
   
@@ -38,7 +44,13 @@ void update_sysclk_to_128mhz() {
   
   /* Clear Flash Waitstates */
   FLASH->ACR &= ~FLASH_ACR_LATENCY;
-    
+  
+  /* Enable Prefetch Buffer */
+  // FLASH->ACR |= FLASH_ACR_PRFTBE;
+  
+  /* Wait Until Prefetch Buffer Is Enabled */
+  // while( !(FLASH->ACR & FLASH_ACR_PRFTBS) ) { ; }
+  
   /* Set Flash To Two Waitstates */
   FLASH->ACR |= FLASH_ACR_LATENCY_1;
   

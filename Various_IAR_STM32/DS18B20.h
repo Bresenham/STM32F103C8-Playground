@@ -4,8 +4,12 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#include "ROM_CODE.h"
+
 struct DS18B20 {
-	uint64_t (*readDeviceID)();
+  struct ROM_CODE rom_code;
+
+  void (*readDeviceID)(struct DS18B20*);
 };
 
 void initDS18B20(struct DS18B20 *self);

@@ -1,18 +1,19 @@
-main.pbi: \
-  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32\GlobalHelperFunctions.h \
-  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32\DS18B20.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdbool.h \
-  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32\CMSIS\system_stm32f1xx.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\iccarm_builtin.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\CMSIS\Core\Include\cmsis_iccarm.h \
-  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32\CMSIS\cmsis_compiler.h \
-  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32\CMSIS\cmsis_version.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Product.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Defaults.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\yvals.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ycheck.h \
+main.pbi: Z:\Git\STM32F103C8-Playground\Various_IAR_STM32\main.c \
+  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32/CMSIS/stm32f1xx.h \
+  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32/CMSIS/stm32f103xb.h \
+  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32/CMSIS/core_cm3.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdint.h \
-  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32\CMSIS\core_cm3.h \
-  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32\CMSIS\stm32f103xb.h \
-  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32\CMSIS\stm32f1xx.h \
-  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32\main.c
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ycheck.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\yvals.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Defaults.h \
+  C:\\Program\ Files\ (x86)\\IAR\ Systems\\Embedded\ Workbench\ 8.3\\arm\\inc\\c\\DLib_Config_Normal.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Product.h \
+  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32/CMSIS/cmsis_version.h \
+  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32/CMSIS/cmsis_compiler.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\CMSIS\Core\Include\cmsis_iccarm.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\iccarm_builtin.h \
+  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32/CMSIS/system_stm32f1xx.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdbool.h \
+  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32/DS18B20.h \
+  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32/ROM_CODE.h \
+  Z:\Git\STM32F103C8-Playground\Various_IAR_STM32/GlobalHelperFunctions.h
